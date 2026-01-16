@@ -1,0 +1,27 @@
+[JobWorker] Starting with 4 parallel workers
+[JobWorker] Database connection established, starting job processing
+12:12:10 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+12:12:15 PM [express] HEAD /api/report/pdf 404 in 2ms :: {"success":false,"message":"Report PDF not f…    
+12:12:20 PM [express] GET /api/user/profile 401 in 1ms :: {"success":false,"message":"Not authenticat…    
+12:12:26 PM [express] POST /api/login 200 in 78ms :: {"success":true,"message":"Login successful","us…    
+Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client
+    at ServerResponse.setHeader (node:_http_outgoing:659:11)
+    at ServerResponse.header (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\response.js:794:10)
+    at ServerResponse.send (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\response.js:174:12)
+    at ServerResponse.json (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\response.js:278:15)
+    at ServerResponse.res.json (F:\Racktrack0912 (1)\Racktrack0912\server\index.ts:15:28)
+    at <anonymous> (F:\Racktrack0912 (1)\Racktrack0912\server\index.ts:44:24)
+    at Layer.handle_error (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\router\layer.js:71:5)
+    at trim_prefix (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\router\index.js:326:13)   
+    at F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\router\index.js:286:9
+    at Function.process_params (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\router\index.js:346:12)
+    at Immediate.next (F:\Racktrack0912 (1)\Racktrack0912\node_modules\express\lib\router\index.js:280:10)
+    at process.processImmediate (node:internal/timers:480:21)
+12:12:32 PM [express] POST /api/upload 200 in 28ms :: {"success":true,"message":"Successfully uploade…    
+12:12:33 PM [express] HEAD /api/report/pdf 404 in 2ms :: {"success":false,"message":"Report PDF not f…    
+[JobWorker] Starting job job_1765348952482_f5061b17
+[JobWorker] Running: F:\Racktrack0912 (1)\Racktrack0912\python_codes\single.py F:\Racktrack0912 (1)\Racktrack0912\jobs_output\job_1765348952482_f5061b17\input\1765348952479-633130763-6bed0d86f19ff3bdcb642cf73102bed8.jpg F:\Racktrack0912 (1)\Racktrack0912\jobs_output\job_1765348952482_f5061b17\output
+[JobWorker] Job job_1765348952482_f5061b17 completed in 3.80s

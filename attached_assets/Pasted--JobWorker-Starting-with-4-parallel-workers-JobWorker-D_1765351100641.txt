@@ -1,0 +1,55 @@
+[JobWorker] Starting with 4 parallel workers
+[JobWorker] Database connection established, starting job processing
+12:43:11 PM [express] serving on port 5000
+Browserslist: browsers data (caniuse-lite) is 14 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+12:45:10 PM [express] GET /api/user/profile 401 in 5ms :: {"success":false,"message":"Not authenticat…
+12:45:22 PM [express] POST /api/register 400 in 208ms :: {"success":false,"message":"Username already…
+12:45:27 PM [express] POST /api/login 200 in 99ms :: {"success":true,"message":"Login successful","us…
+Error: Incorrect datetime value: '1765437328' for column 'expire' at row 1
+    at PromisePool.query (F:\Racktrack0912 (2)\Racktrack0912\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:384:30
+    at new Promise (<anonymous>)
+    at MySQLStore.query (F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:381:10)
+    at F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:232:16
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ER_TRUNCATED_WRONG_VALUE',
+  errno: 1292,
+  sql: 'INSERT INTO `session` (`sid`, `expire`, `sess`) VALUES (\'nskmZtf-eFopwU046SHQFGz0B97YMfwc\', 1765437328, \'{\\"cookie\\":{\\"originalMaxAge\\":86400000,\\"expires\\":\\"2025-12-11T07:15:27.708Z\\",\\"secure\\":false,\\"httpOnly\\":true,\\"path\\":\\"/\\"},\\"userId\\":\\"3555ce9a-bfd9-4971-b9f5-e539f66dbb3b\\",\\"username\\":\\"qwe\\"}\') ON DUPLICATE KEY UPDATE `expire` = VALUES(`expire`), `sess` = VALUES(`sess`)',
+  sqlState: '22007',
+  sqlMessage: "Incorrect datetime value: '1765437328' for column 'expire' at row 1"
+}
+12:45:33 PM [express] POST /api/upload 200 in 40ms :: {"success":true,"message":"Successfully uploade…
+Error: Incorrect datetime value: '1765437334' for column 'expire' at row 1
+    at PromisePool.query (F:\Racktrack0912 (2)\Racktrack0912\node_modules\mysql2\lib\promise\pool.js:36:22)
+    at F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:384:30
+    at new Promise (<anonymous>)
+    at MySQLStore.query (F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:381:10)
+    at F:\Racktrack0912 (2)\Racktrack0912\node_modules\express-mysql-session\index.js:232:16
+2-11T07:15:33.635Z\\",\\"secure\\":false,\\"httpOnly\\":true,\\"path\\":\\"/\\"},\\"currentJobId\\":\\"job_1765350933608_028d0024\\"}\') ON DUPLICATE KEY UPDATE `expire` = VALUES(`expire`), `sess` = VALUES(`sess`)',
+  sqlState: '22007',
+2-11T07:15:33.635Z\\",\\"secure\\":false,\\"httpOnly\\":true,\\"path\\":\\"/\\"},\\"currentJobId\\":\\"job_1765350933608_028d0024\\"}\') ON DUPLICATE KEY UPDATE `expire` = VALUES(`expire`), `sess` = VALUES(`sess`)',
+  sqlState: '22007',
+  sqlMessage: "Incorrect datetime value: '1765437334' for column 'expire' at row 1"
+}
+[JobWorker] Starting job job_1765350933608_028d0024
+[JobWorker] Running: F:\Racktrack0912 (2)\Racktrack0912\python_codes\single.py F:\Racktrack0912 (2)\Racktrack0912\jobs_output\job_1765350933608_ 2 2 2 2 2ms :: []
+12:45:38 PM [express] GET /api/segments/switch 304 in 2ms :: []
+12:45:38 PM [express] GET /api/segments/connected_port 304 in 4ms :: []     
+12:45:38 PM [express] GET /api/segments/empty_port 304 in 3ms :: []
+[JobWorker] Job job_1765350933608_028d0024 completed in 6.80s
+[Report Generation] Starting report generation process
+12:46:28 PM [express] POST /api/generate-report 400 in 2ms :: {"success":false,"message":"No active j…
+12:47:14 PM [express] GET /api/segments/connected_port 304 in 2ms :: []     
+12:47:15 PM [express] GET /api/segments/switch 304 in 3ms :: []
+12:47:15 PM [express] GET /api/segments/cables 304 in 2ms :: []
+12:47:16 PM [express] GET /api/segments/rack 304 in 3ms :: []
+
+
+
+
+
+
+
+

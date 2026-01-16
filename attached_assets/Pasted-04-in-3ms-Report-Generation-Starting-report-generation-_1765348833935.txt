@@ -1,0 +1,73 @@
+04 in 3ms :: []
+[Report Generation] Starting report generation process
+[Report Generation] Running: 1_rack_match.py
+[Report Generation] Error in 1_rack_match.py: Error: Command failed: "F:\Racktrack0912 (1)\Racktrack0912\.venv\Scripts\python.exe" "F:\Racktrack0912 (1)\Racktrack0912\python_codes\1_rack_match.py"
+The system cannot find the path specified.
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 1,
+  killed: false,
+The system cannot find the path specified.
+
+    at <anonymous> (F:\Racktrack0912 (1)\Racktrack0912\server\routes.ts:589:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+12:04:57 PM [express] POST /api/generate-report 500 in 20ms :: {"success":false,"message":"Failed to …    
+12:09:59 PM [express] POST /api/upload 200 in 25ms :: {"success":true,"message":"Successfully uploade…
+[JobWorker] Starting job job_1765348799232_12ec689c
+[JobWorker] Running: F:\Racktrack0912 (1)\Racktrack0912\python_codes\single.py F:\Racktrack0912 (1)\Racktrack0912\jobs_output\job_1765348799232_12ec689c\input\1765348799230-455310174-6e5f3e879c354293c69ababa7db1b46e.jpg F:\Racktrack0912 (1)\Racktrack0912\jobs_output\job_1765348799232_12ec689c\output
+12:10:00 PM [express] HEAD /api/report/pdf 404 in 2ms :: {"success":false,"message":"Report PDF not f…
+[JobWorker] Job job_1765348799232_12ec689c completed in 4.09s
+12:10:05 PM [express] GET /api/segments/rack 304 in 2ms :: []
+[Report Generation] Starting report generation process
+[Report Generation] Running: 1_rack_match.py
+[Report Generation] Error in 1_rack_match.py: Error: Command failed: "F:\Racktrack0912 (1)\Racktrack0912\.venv\Scripts\python.exe" "F:\Racktrack0912 (1)\Racktrack0912\python_codes\1_rack_match.py"
+The system cannot find the path specified.
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)       
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:518:28)        
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: '"F:\\Racktrack0912 (1)\\Racktrack0912\\.venv\\Scripts\\python.exe" "F:\\Racktrack0912 (1)\\Racktrack0912\\python_codes\\1_rack_match.py"',
+  stdout: '',
+  stderr: 'The system cannot find the path specified.\r\n'
+}
+Report generation error: Error: Failed to run 1_rack_match.py: Command failed: "F:\Racktrack0912 (1)\Racktrack0912\.venv\Scripts\python.exe" "F:\Racktrack0912 (1)\Racktrack0912\python_codes\1_rack_match.py"      
+The system cannot find the path specified.
+
+    at <anonymous> (F:\Racktrack0912 (1)\Racktrack0912\server\routes.ts:589:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+12:10:06 PM [express] POST /api/generate-report 500 in 15ms :: {"success":false,"message":"Failed to …    
+[Report Generation] Starting report generation process
+[Report Generation] Running: 1_rack_match.py
+[Report Generation] Error in 1_rack_match.py: Error: Command failed: "F:\Racktrack0912 (1)\Racktrack0912\.venv\Scripts\python.exe" "F:\Racktrack0912 (1)\Racktrack0912\python_codes\1_rack_match.py"
+The system cannot find the path specified.
+
+    at genericNodeError (node:internal/errors:984:15)
+    at wrappedFn (node:internal/errors:538:14)       
+    at ChildProcess.exithandler (node:child_process:422:12)
+    at ChildProcess.emit (node:events:518:28)        
+    at maybeClose (node:internal/child_process:1105:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:305:5) {
+  code: 1,
+  killed: false,
+  signal: null,
+  cmd: '"F:\\Racktrack0912 (1)\\Racktrack0912\\.venv\\Scripts\\python.exe" "F:\\Racktrack0912 (1)\\Racktrack0912\\python_codes\\1_rack_match.py"',
+  stdout: '',
+  stderr: 'The system cannot find the path specified.\r\n'
+}
+Report generation error: Error: Failed to run 1_rack_match.py: Command failed: "F:\Racktrack0912 (1)\Racktrack0912\.venv\Scripts\python.exe" "F:\Racktrack0912 (1)\Racktrack0912\python_codes\1_rack_match.py"      
+The system cannot find the path specified.
+
+    at <anonymous> (F:\Racktrack0912 (1)\Racktrack0912\server\routes.ts:589:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+12:10:15 PM [express] POST /api/generate-report 500 in 13ms :: {"success":false,"message":"Failed to …    

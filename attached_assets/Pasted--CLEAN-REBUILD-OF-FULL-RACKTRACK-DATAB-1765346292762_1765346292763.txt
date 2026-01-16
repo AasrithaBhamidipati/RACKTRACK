@@ -1,0 +1,93 @@
+-- =======================================================
+--  CLEAN REBUILD OF FULL RACKTRACK DATABASE
+-- =======================================================
+
+DROP DATABASE IF EXISTS RACKTRACK;
+CREATE DATABASE RACKTRACK;
+USE RACKTRACK;
+
+-- =======================================================
+--  TABLE: session
+-- =======================================================
+
+CREATE TABLE session (
+    sid VARCHAR(255) PRIMARY KEY,
+    sess JSON NOT NULL,
+    expire TIMESTAMP(6) NOT NULL
+);
+
+-- =======================================================
+--  TABLE: users
+-- =======================================================
+
+CREATE TABLE users (
+    id CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+    username VARCHAR(255) NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    email TEXT,
+    full_name TEXT,
+    profile_image TEXT,
+    joined_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- =======================================================
+--  TABLE: uploads
+-- =======================================================
+
+CREATE TABLE uploads (
+    id CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+    file_name TEXT NOT NULL,
+    file_type TEXT NOT NULL,
+    file_path TEXT NOT NULL,
+    upload_type TEXT NOT NULL,
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- =======================================================
+--  TABLE: contacts
+-- =======================================================
+
+CREATE TABLE contacts (
+    id CHAR(36) PRIMARY KEY DEFAULT (UUID()),
+    name TEXT NOT NULL,
+    email TEXT NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- =======================================================
+--  TABLE: jobs
+-- =======================================================
+
+CREATE TABLE jobs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    job_id VARCHAR(100) NOT NULL UNIQUE,
+    user_id CHAR(36),
+    upload_id CHAR(36),
+    job_type ENUM('cpu', 'gpu') DEFAULT 'cpu',
+    status ENUM('waiting', 'processing', 'done', 'failed') DEFAULT 'waiting',
+    input_path TEXT NOT NULL,
+    output_path TEXT,
+    error_message TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+        ON UPDATE CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (upload_id) REFERENCES uploads(id)
+);
+
+-- =======================================================
+--  TABLE: job_logs
+-- =======================================================
+
+CREATE TABLE job_logs (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    job_id VARCHAR(100) NOT NULL,
+    message TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+-- =======================================================
+-- END OF FILE — ALL TABLES CREATED SUCCESSFULLY
+-- =======================================================
