@@ -1,34 +1,17 @@
-﻿# Python
+﻿# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-env/
-venv/
-.env
-.vscode/
-.idea/
-
-# Node
-node_modules/
-
-# Data / outputs / generated assets
-jobs_output/
-Results/
-"no images"/
-Audit_Summary_Report*.pdf
-Audit_Summary_Report*.txt
-attached_assets/generated_images/
-Description_excel/
-files/
-
-# Trained models (do not commit)
-Trained_Models/
-*.pt
-*.h5
-*.keras
-*.ckpt
 
 # OS
 .DS_Store
 Thumbs.db
+
+# outputs (recommended)
+jobs_output/
+Results/
